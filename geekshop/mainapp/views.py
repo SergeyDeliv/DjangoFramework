@@ -1,37 +1,39 @@
+import json
+import os
+
+from django.conf import settings
 from django.shortcuts import render
-from datetime import datetime
+
+from mainapp.models import Product, ProductCategory
 
 
 def main(request):
+    title = 'Главная'
+    products = Product.objects.all()[:4]
     content = {
-        'title': 'Главная'
-    }
+        'title': title, 'products': products}
     return render(request, 'mainapp/index.html', content)
 
 
-def products(request):
-    links_menu = [
-        {'href': 'products_all', 'name': 'все'},
-        {'href': 'products_home', 'name': 'дом'},
-        {'href': 'products_office', 'name': 'офис'},
-        {'href': 'products_modern', 'name': 'модерн'},
-        {'href': 'products_classic', 'name': 'классика'},
-    ]
+def products(request, pk=None):
+    title = 'Продукты'
+    same_products = Product.objects.all()[:4]
+    links_menu = ProductCategory.objects.all()
     content = {
-        'title': 'Продукты',
-        'links_menu': links_menu
+        'title': title,
+        'links_menu': links_menu,
+        'same_products': same_products
     }
     return render(request, 'mainapp/products.html', content)
 
 
 def contact(request):
-    location = [
-        {'city': 'Москва', 'phone': '+7-888-888-8888', 'email': 'info@geekshop.ru', 'address': 'В пределах МКАД'},
-        {'city': 'Москва', 'phone': '+7-888-888-8888', 'email': 'info@geekshop.ru', 'address': 'В пределах МКАД'},
-        {'city': 'Москва', 'phone': '+7-888-888-8888', 'email': 'info@geekshop.ru', 'address': 'В пределах МКАД'},
-    ]
+    title = 'о нас'
+    locations = []
+    with open(os.path.join(settings.BASE_DIR, 'contacts.json'), encoding='utf8') as f:
+        locations = json.load(f)
     content = {
-        'title': 'Контакты',
-        'location': location
+        'title': title,
+        'locations': locations
     }
     return render(request, 'mainapp/contact.html', content)
