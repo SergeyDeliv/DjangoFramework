@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce7bff94-e142-4f46-8063-eecdc6ad13f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="ce7bff94-e142-4f46-8063-eecdc6ad13f6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -43,10 +33,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mainapp/templates/mainapp/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Fork\DjangoFramework lessons\lesson_5\geekshop\static" />
+      <recent name="D:\Fork\DjangoFramework lessons\lesson_5\geekshop\static\css" />
       <recent name="D:\Fork\DjangoFramework\geekshop\mainapp\templates\mainapp\includes" />
       <recent name="D:\Fork\DjangoFramework\geekshop\media\products_images" />
       <recent name="D:\Fork\DjangoFramework\geekshop\mainapp\templates\mainapp" />
@@ -91,7 +83,8 @@
       <workItem from="1615349434448" duration="3788000" />
       <workItem from="1615469928369" duration="3876000" />
       <workItem from="1615475357125" duration="4098000" />
-      <workItem from="1615794068902" duration="13355000" />
+      <workItem from="1615794068902" duration="15205000" />
+      <workItem from="1615976293331" duration="22933000" />
     </task>
     <servers />
   </component>

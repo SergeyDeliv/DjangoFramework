@@ -3,18 +3,18 @@
 
 
 {% block content %}
-     <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ edit_form.as_p }}
-        <br>
         <input class="form-control" type="submit" value="сохранить">
     </form>
-    <button class="btn btn-link form-control">
-        <a href="{% url 'main' %}">
+    <button class="btn btn-round form-control last">
+        <a href="{% url 'main' %}" class="">
             на главную
         </a>
     </button>
-    <div class="">
-    <img src="/media/{{ user.avatar }}"/>
+    <div class="user_avatar">
+        <img src="/media/{{ user.avatar }}">
     </div>
 {% endblock %}
+
