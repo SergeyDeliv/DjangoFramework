@@ -1,7 +1,8 @@
 <ul class="menu">
     <li>
         <a href="{% url 'main' %}"
-           class="{% if request.resolver_match.url_name == 'main' %}active{% endif %}">
+           class="{% if request.resolver_match.url_name == 'main' %}
+           active{% endif %}">
             домой
         </a>
     </li>
@@ -14,7 +15,8 @@
     </li>
     <li>
         <a href="{% url 'contact' %}"
-           class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+           class="{% if request.resolver_match.url_name == 'contact' %}
+           active{% endif %}">
             контакты
         </a>
     </li>
@@ -39,7 +41,9 @@
 </ul>
 <a href="#" class="search"></a>
 <a href="{% url 'basket:view' %}" class="basket">
-                <span>
-                    {{ basket }}
-                </span>
+<span>
+    {% if basket %}
+        {{ basket.0.total_cost|floatformat:0 }}&nbsp;руб&nbsp;({{ basket.0.total_quantity }}&nbsp;шт)
+    {% endif %}
+</span>
 </a>
