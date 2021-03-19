@@ -26,16 +26,21 @@
                 {{ user.first_name|default:'Пользователь' }}
             </a>
         </li>
+    {% endif %}
+    {% if user.is_superuser %}
         <li>
-            <a href="{% url 'auth:logout' %}">
-                выход
+            <a href="{% url 'adminapp:user_read' %}">
+                Админка
             </a>
+        </li>
+    {% endif %}
+    {% if user.is_authenticated %}
+        <li>
+            <a href="{% url 'auth:logout' %}">выйти</a>
         </li>
     {% else %}
         <li>
-            <a href="{% url 'auth:login' %}">
-                вход
-            </a>
+            <a href="{% url 'auth:login' %}">войти</a>
         </li>
     {% endif %}
 </ul>
