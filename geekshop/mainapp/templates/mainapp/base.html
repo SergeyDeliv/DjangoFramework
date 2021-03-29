@@ -12,14 +12,19 @@
     {% endblock %}
 </head>
 <body>
+
 <div class="container">
+
+    {% block menu %}
+
+    {% endblock %}
 
     {% block content %}
 
     {% endblock %}
-    <div class="clr"></div>
-</div>
 
+</div>
+<div class="clr"></div>
 {% block footer %}
     <div class="footer">
         <div class="clearfix">
