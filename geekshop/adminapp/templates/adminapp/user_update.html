@@ -3,10 +3,11 @@
 
 {% block content %}
     <div class="users_list">
-        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <input class="form-control" type="submit" value="сохранить">
+
         </form>
         <button class="btn btn-round form-control last">
             <a href="{% url 'admin:user_read' %}">
@@ -14,4 +15,5 @@
             </a>
         </button>
     </div>
+
 {% endblock %}

@@ -1,54 +1,56 @@
+<a href="{% url 'main' %}" class="logo"></a>
 <ul class="menu">
     <li>
-        <a href="{% url 'main' %}"
-           class="{% if request.resolver_match.url_name == 'main' %}
-           active{% endif %}">
+        <a href="{% url 'main' %}" {% if 'main' in request.resolver_match.url_name %}class="active"{% endif %}>
             домой
         </a>
     </li>
     <li>
-        <a href="{% url 'products:products' %}"
-           class="{% if request.resolver_match.namespace == 'products' %}
-           active{% endif %}">
+        <a href="{% url 'products:index' %}"
+           {% if 'products' in request.resolver_match.namespace %}class="active"{% endif %}>
             продукты
         </a>
     </li>
     <li>
         <a href="{% url 'contact' %}"
-           class="{% if request.resolver_match.url_name == 'contact' %}
-           active{% endif %}">
+           {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>
             контакты
         </a>
     </li>
+
     {% if user.is_authenticated %}
         <li>
             <a href="{% url 'auth:edit' %}">
-                {{ user.first_name|default:'Пользователь' }}
+                {{ user.first_name|default:"Пользователь" }}
             </a>
         </li>
-    {% endif %}
-    {% if user.is_superuser %}
+        {% if user.is_superuser %}
+            <li>
+                <a href="{% url 'adminapp:user_read' %}">
+                    {{ user.first_name|default:'Пользователь' }}
+                    админка
+                </a>
+            </li>
+        {% endif %}
         <li>
-            <a href="{% url 'adminapp:user_read' %}">
-                Админка
+            <a href="{% url 'auth:logout' %}">
+                выход
             </a>
-        </li>
-    {% endif %}
-    {% if user.is_authenticated %}
-        <li>
-            <a href="{% url 'auth:logout' %}">выйти</a>
         </li>
     {% else %}
         <li>
-            <a href="{% url 'auth:login' %}">войти</a>
+            <a href="{% url 'auth:login' %}">
+                вход
+            </a>
         </li>
     {% endif %}
 </ul>
 <a href="#" class="search"></a>
 <a href="{% url 'basket:view' %}" class="basket">
-<span>
-    {% if basket %}
-        {{ basket.0.total_cost|floatformat:0 }}&nbsp;руб&nbsp;({{ basket.0.total_quantity }}&nbsp;шт)
-    {% endif %}
-</span>
+                <span>
+                    {% if basket %}
+                        {{ basket.0.total_cost|floatformat:0 }}&nbsp;руб
+                        ({{ basket.0.total_quantity }}&nbsp;шт)
+                    {% endif %}
+                </span>
 </a>
