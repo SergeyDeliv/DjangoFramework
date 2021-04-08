@@ -4,7 +4,7 @@
     "name": "комфорт 1",
     "image": "products_images/product-1.jpg",
     "short_desc": "комфортный стул",
-    "description": "подойдёт для просмотра фильмов",
+    "description": "подойдет для просмотра фильмов",
     "price": "2989.5",
     "quantity": "17"
   },
@@ -13,7 +13,7 @@
     "name": "комфорт 2",
     "image": "products_images/product-2.jpg",
     "short_desc": "очень комфортный стул",
-    "description": "подойдёт для общения с друзьями",
+    "description": "подойдет для общения с друзьями",
     "price": "3687.2",
     "quantity": "21"
   },
@@ -31,7 +31,7 @@
     "name": "стандарт",
     "image": "products_images/product-4.jpg",
     "short_desc": "универсальное решение",
-    "description": "подойдёт для любого офиса",
+    "description": "подойдет для любого офиса",
     "price": "1895.25",
     "quantity": "27"
   },
@@ -48,7 +48,7 @@
     "category": "модерн",
     "name": "новинка",
     "image": "products_images/product-6.jpg",
-    "short_desc": "иновационный дизайн",
+    "short_desc": "инновационный дизайн",
     "description": "нестандартное решение для современного интерьера",
     "price": "5361.47",
     "quantity": "18"

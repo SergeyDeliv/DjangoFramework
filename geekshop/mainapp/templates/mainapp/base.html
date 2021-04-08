@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if title %}{{ title|title }} - {% endif %}Мой магазин
+        {% if title %}
+            {{ title|title }} -
+        {% endif %}
+        Мой Гамазин
     </title>
     {% block css %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -14,17 +17,13 @@
 <body>
 
 <div class="container">
-
     {% block menu %}
-
     {% endblock %}
-
     {% block content %}
-
     {% endblock %}
-
+    <div class="clr"></div>
 </div>
-<div class="clr"></div>
+
 {% block footer %}
     <div class="footer">
         <div class="clearfix">
@@ -43,7 +42,7 @@
                 </form>
             </div>
         </div>
-        <p class="small">&copy; GB {% now "Y" %}</p>
+        <p class="small">&copy; GB {% now 'Y' %}</p>
         <div class="social">
             <a href="#" class="social1"></a>
             <a href="#" class="social2"></a>
